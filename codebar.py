@@ -14,37 +14,36 @@ class Student(Member):
         self.reason = reason
 
 class Instructor(Member):
-    def __init__ (self, full_name, bio, skills, add_skill):
+    def __init__ (self, full_name, bio):
         super(). __init__ (full_name)
         self.bio = bio
-        self.skills = skills
-        self.add_skill = add_skill
+        self.skills = []
+    def add_skill(self, skill):
+        self.skills.append(skill)
 
 class Workshop:
-    def __init__ (self, date, subject, instructors, students):
+    def __init__ (self, date, subject,):
         self.date = date
         self.subject = subject
-        self.instructors = instructors = []
-        self.students = students = []
-    
-    def add_participant (self, member):
-        if type(name) is Student:
-            self.students.append(name)
-        else:
-            self.instructors.append(name)
+        self.instructors = []
+        self.students = []
 
-    def print_details(self):
-        print(f"Workshop - {self.date} - {self.subject}")
-        print("Students")
-        for idx
-    # def add_participant (self, member):
-    #     self.member = member
-    #     if (type(member).__name__) == 'Student':
-    #         self.students.append(member)
-    #     elif (type(member).__name__) == 'Instructor':
-    #         self.instructors.append(member)
-    #     else:
-    #         print ("unknown member")
+    def add_participant (self, member):
+        self.member = member
+        if (type(member).__name__) == 'Student':
+            self.students.append(member)
+        elif (type(member).__name__) == 'Instructor':
+            self.instructors.append(member)
+        else:
+            print ("unknown member")
+    def print_details (self):
+        print (f"workshop details{self.date}{self.subject}")
+        print ("Students")
+        for idx, student in enumerate(self.students):
+            print(f"{idx + 1}. {student.full_name} - {student.reason}")
+        print ("Instructors")
+        for idx, instructor in enumerate(self.instructors):
+            print(f"{idx + 1}. {instructor.full_name} - {instructor.skills} - {instructor.bio}")
 
 workshop = Workshop("12/03/2014", "Shutl")
 
