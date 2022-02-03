@@ -60,14 +60,3 @@ workshop.add_participant(lena)
 workshop.add_participant(vicky)
 workshop.add_participant(nicole)
 workshop.print_details()
-   
-    # def add_participant (self, member):
-    #     if type(name) is Student:
-    #         self.students.append(name)
-    #     else:
-    #         self.instructors.append(name)
-
-    # def print_details(self):
-    #     print(f"Workshop - {self.date} - {self.subject}")
-    #     print("Students")
-    #     for idx
