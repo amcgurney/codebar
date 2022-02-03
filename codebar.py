@@ -36,6 +36,7 @@ class Workshop:
             self.instructors.append(member)
         else:
             print ("unknown member")
+    
     def print_details (self):
         print (f"workshop details{self.date}{self.subject}")
         print ("Students")
